@@ -1,0 +1,44 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Booking</ion-card-subtitle>
+    <ion-card-title>Login</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="login-box">
+      <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              <ion-item>
+                <ion-input
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                  [(ngModel)]="credential.email"
+                  required
+                ></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  [(ngModel)]="credential.password"
+                  required
+                ></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="signup-col">
+            <ion-button color="success" full type="submit">Login</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </ion-card-content>
+</ion-card>
